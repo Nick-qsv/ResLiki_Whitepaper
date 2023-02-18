@@ -1,13 +1,14 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{}%
 \contentsline {section}{\numberline {2}Why has no-one done this before?}{4}{}%
-\contentsline {subsection}{\numberline {2.1}What makes ResLiki different?}{4}{}%
+\contentsline {subsection}{\numberline {2.1}What makes ResLiqi different?}{4}{}%
 \contentsline {subsubsection}{\numberline {2.1.1}Primary Trading Transaction Overview}{4}{}%
-\contentsline {subsection}{\numberline {2.2}Network Equity}{4}{}%
-\contentsline {section}{\numberline {3}Implementation}{4}{}%
-\contentsline {subsection}{\numberline {3.1}Phone Application}{4}{}%
-\contentsline {subsubsection}{\numberline {3.1.1}Wallet Implementation}{4}{}%
-\contentsline {subsubsection}{\numberline {3.1.2}Fiat On-Ramp}{4}{}%
-\contentsline {subsection}{\numberline {3.2}Reservation System}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Secondary Trading Transaction Overview}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Network Equity}{5}{}%
+\contentsline {section}{\numberline {3}Implementation}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Phone Application}{5}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Wallet Implementation}{5}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Fiat On-Ramp}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Reservation System}{5}{}%
 \contentsline {section}{\numberline {4}Blockchain Backend}{5}{}%
 \contentsline {subsection}{\numberline {4.1}Currency}{5}{}%
 \contentsline {subsection}{\numberline {4.2}Efficient Blockspace}{5}{}%

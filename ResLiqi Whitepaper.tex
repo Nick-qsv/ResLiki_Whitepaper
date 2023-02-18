@@ -9,9 +9,9 @@
 \usepackage[margin=3cm]{geometry}
 \setlength{\parskip}{3pt}
 
-\title{\Huge ResLiki: A Restaurant Reservation Liquidity System}
+\title{\Huge ResLiqi: A Restaurant Reservation Liquidity System}
 \date{\vspace{-5ex}} % remove the default date space
-\author{\LARGE Liki Labs}
+\author{\LARGE Nicolas Baez}
 \begin{document}
 	\maketitle
 	\begin{center}
@@ -59,8 +59,8 @@
 	\section{Why has no-one done this before?}
 	\hspace{1cm} Companies have tried to implement a reservation exchange on web 2.0 platforms like %list companies.
 	The issue these companies have struggled with has been the buy in of the restaurants, and the tracking of the exchanges.  The restaurants would have to pay a consistent fee to the centralized company running the website and the servers.  Frankly, there has never been a well designed system that was done through the buy in of the restaurants, so they have all defaulted to the duopoly of OpenTable and Resy to manage their reservations.  
-	\subsection{What makes ResLiki different?}
-	\hspace{1cm} ResLiki is a system where the restaurants will earn the majority of the income generated through the reservation trading system through two income streams:
+	\subsection{What makes ResLiqi different?}
+	\hspace{1cm} ResLiqi is a system where the restaurants will earn the majority of the income generated through the reservation trading system through two income streams:
 		\begin{enumerate}[label=\textbf{\Roman*}.]
 			\item \textbf{Primary trading.}  A customer buying a reservation directly from the restaurant)
 			\item \textbf{Secondary trading.}  A royalty fee (set by the restaurant) for each sale of the reservation on the secondary market.
@@ -68,22 +68,66 @@
 	\subsubsection{Primary Trading Transaction Overview}
 	\hspace{1cm}A primary trade is the direct sale of reservation from the restaurant to a customer for a fixed price.  In this case an 8:00pm Saturday Reservation $(R_{1})$ is exchanged for \$20.  A 2.5\% transaction fee is applied, giving the restaurant \$19.50 net.
 	\begin{center}
-		\begin{tabular}{l c r}
-			\text{Restaurant} & 
-			$\begin{array}{c}
-				\text{8:00pm Saturday Reservation } (R_{1}) \\
-			      	\xrightarrow{\hspace*{1.5cm}} \\
-					\xleftarrow{\hspace*{1.5cm}} \\
-				\text{\$19.50}
-			\end{array}$ & 
-			\text{Customer}
-		\end{tabular}
+\begin{tabular}{l c r}
+	$Restaurant_{1}$& 
+	$\begin{array}{c}
+		\text{8:00pm Saturday Reservation } (R_{1}) \\
+		\xrightarrow{\hspace*{1.5cm}} \\
+		\xleftarrow{\hspace*{1.5cm}} \\
+		\text{\$19.50}
+			\vspace*{0.3cm}
+	\end{array}$ & 
+	$Customer_{1}$ \\
+	\vspace*{0.3cm}
+	& $\begin{array}{c}
+   	\hspace*{1cm}\vspace*{0.3cm} \downarrow \text{\$0.50} \\
+	Liqi\\
+	\end{array}$ &
+\end{tabular}
 	\end{center}
 	\subsubsection{Secondary Trading Transaction Overview}
-	\hspace{1cm}A secondary trade is the 
-	
+	\hspace{1cm}A secondary trade is the exchange of the $R_{1}$ between customers (or traders).  The restaurant sets the royalty fee as a \% of each transaction between customers.  This can be set at 90-100\% in order to discourage or eliminate secondary trading of reservations.  In this example we set a 25\% royalty fee which is allocated directly to the restaurants wallet whenever a transaction is completed.  In this case $Customer_{1}$ sells $R_{1}$ to $Customer_{2}$ for \$40.  \$10 is allocated to the restaurant.  A 2.5\% transaction fee is applied to the transaction, but not to the royalty fee.  The royalty fee is extracted prior to the transaction fee.
+	\begin{center}
+\begin{tabular}{l c c r}
+	$Customer_{1}$ & 
+	$\begin{array}{c}
+		R_{1} \\
+		\xrightarrow{\hspace*{1.5cm}} \\
+		\xleftarrow{\hspace*{1.5cm}} \\
+		\text{\$29.25}
+		\vspace*{0.3cm}
+	\end{array}$ & 
+	$\begin{array}{c}
+	R_{1} \\
+	\xrightarrow{\hspace*{1.5cm}} \\
+	\xleftarrow{\hspace*{1.5cm}} \\
+	\text{\$30.00}
+	\vspace*{0.3cm}
+\end{array}$& 
+	$Customer_{2}$ \\
+	&$\begin{array}{c}
+		\hspace*{1cm}\vspace*{0.3cm} \downarrow \text{\$0.75} \\
+		Liqi
+	\end{array}$ & 
+	$\begin{array}{c}
+		\hspace*{1cm}\vspace*{0.3cm} \downarrow \text{\$10.00} \\
+		Restaurant_{1}
+	\end{array}$ 
+	  &  \\
+\end{tabular}
+
+\end{center}
 	\subsection{Network Equity}
-		
+		\begin{tabular}{l c c c r}
+			$Customer_{1}$ & 
+			$19.50$ & 
+			$\xrightarrow{\hspace*{1.5cm}}\,\xleftarrow{\hspace*{1.5cm}}$ & 
+			$0.50$ & 
+			$Customer_{2}$ \\
+			& & $\begin{array}{c}
+				R_{1} \\
+			\end{array}$ & & \\
+		\end{tabular}
 	This is the motivation.
 	
 	\section{Implementation}
